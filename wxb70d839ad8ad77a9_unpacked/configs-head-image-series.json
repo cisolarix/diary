@@ -1,0 +1,90 @@
+{
+  "_id": "head_image_series",
+  "updateTime": 1746338100000,
+  "series": [
+    {
+      "id": "series4",
+      "name": "手绘插画",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144316_114_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144317_115_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144318_116_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144319_117_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144320_118_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144352_120_38.png",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E7%94%BB/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260406144315_113_38.png"
+      ]
+    },
+    {
+      "id": "series_linedog",
+      "name": "线条小狗",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142452_301_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142453_302_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142453_303_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142454_304_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142455_305_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142456_306_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E7%BA%BF%E6%9D%A1%E5%B0%8F%E7%8B%97/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504142457_307_38.jpg"
+      ]
+    },
+    {
+      "id": "series_sanrio",
+      "name": "三丽鸥",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143003_308_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143003_309_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143004_310_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143005_311_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143006_312_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504143007_313_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E4%B8%89%E4%B8%BD%E9%B8%A5/%E6%9B%B4%E5%A4%9A_more.jpg"
+      ]
+    },
+    {
+      "id": "series_kitty",
+      "name": "Hello Kitty",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144149_315_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144150_316_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144150_317_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144151_318_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144152_319_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144153_320_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/hellokitty/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504144154_321_38.jpg"
+      ]
+    },
+    {
+      "id": "series_animal_sketch",
+      "name": "小动物过家家",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145029_323_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145030_324_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145031_325_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145031_326_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145032_327_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145033_328_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%B0%8F%E5%8A%A8%E7%89%A9%E6%89%8B%E7%BB%98%E9%A3%8E/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504145034_329_38.jpg"
+      ]
+    },
+    {
+      "id": "series_anime_wallpaper",
+      "name": "动漫全家桶",
+      "pointsCost": 10,
+      "images": [
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152414_332_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152414_333_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152415_334_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152416_335_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152417_336_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152418_337_38.jpg",
+        "https://gitee.com/liuxinb/xiangxinriji/raw/master/%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260504152419_338_38.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "entryPagePath": "pages/index/index.html",
+  "pages": [
+    "pages/index/index",
+    "pages/holiday/holiday",
+    "pages/profile/profile",
+    "pages/export-diary/export-diary",
+    "pages/more-settings/more-settings",
+    "pages/edit-profile/edit-profile",
+    "pages/write/write",
+    "pages/calendar/calendar",
+    "pages/search/search",
+    "pages/diary-detail/diary-detail",
+    "pages/stats/stats",
+    "pages/reminder/reminder",
+    "pages/faq/faq",
+    "pages/theme-select/theme-select",
+    "pages/lock-setting/lock-setting",
+    "pages/unlock/unlock",
+    "pages/checkin/checkin",
+    "pages/invite-records/invite-records",
+    "pages/notice/notice"
+  ],
+  "page": {
+    "pages/index/index.html": {
+      "window": {
+        "navigationBarTitleText": "向心日记 · 记录每一天",
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/holiday/holiday.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark"
+      }
+    },
+    "pages/profile/profile.html": {
+      "window": {
+        "navigationBarTitleText": "我的 · 向心日记",
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/export-diary/export-diary.html": {
+      "window": {
+        "navigationBarTitleText": "导出日记",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F7F8FA"
+      }
+    },
+    "pages/more-settings/more-settings.html": {
+      "window": {
+        "navigationBarTitleText": "更多设置"
+      }
+    },
+    "pages/edit-profile/edit-profile.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/write/write.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "写日记 · 向心日记"
+      }
+    },
+    "pages/calendar/calendar.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "时光线 · 向心日记"
+      }
+    },
+    "pages/search/search.html": {
+      "window": {
+        "navigationBarTitleText": "搜索日记 · 向心日记",
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/diary-detail/diary-detail.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/stats/stats.html": {
+      "window": {
+        "navigationBarTitleText": "数据统计 · 向心日记",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "pages/reminder/reminder.html": {
+      "window": {
+        "navigationBarTitleText": "每日提醒",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "pages/faq/faq.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/theme-select/theme-select.html": {
+      "window": {
+        "navigationBarTitleText": "日记头图",
+        "navigationBarBackgroundColor": "#FFF9E6",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "pages/lock-setting/lock-setting.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/unlock/unlock.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "解锁",
+        "backgroundColor": "#000000"
+      }
+    },
+    "pages/checkin/checkin.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "每日签到 · 向心日记"
+      }
+    },
+    "pages/invite-records/invite-records.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/notice/notice.html": {
+      "window": {
+        "navigationBarTitleText": "公告",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
+      }
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于记录日记所在位置"
+    }
+  },
+  "global": {
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTitleText": "向心日记",
+      "navigationBarTextStyle": "black"
+    }
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#667eea",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index.html",
+        "text": "写日记"
+      },
+      {
+        "pagePath": "pages/calendar/calendar.html",
+        "text": "时光线"
+      },
+      {
+        "pagePath": "pages/holiday/holiday.html",
+        "text": "热力图"
+      },
+      {
+        "pagePath": "pages/profile/profile.html",
+        "text": "我的"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["pages/write", "pages/calendar"]
+    }
+  },
+  "renderer": {
+    "allUsed": ["webview"],
+    "default": "webview"
+  },
+  "requiredPrivateInfos": ["chooseLocation"],
+  "componentFramework": {
+    "allUsed": ["exparser"],
+    "default": "exparser"
+  }
+}
