@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="date-label">{{date}}</view>
+
+  <textarea
+    class="editor"
+    placeholder="今天的开心、烦恼和小确幸，都可以写在这里～"
+    maxlength="5000"
+    value="{{content}}"
+    bindinput="onInput"
+    auto-focus
+  />
+
+  <view class="meta">{{content.length}} / 5000</view>
+
+  <button class="primary-btn" bindtap="onSave" loading="{{saving}}" disabled="{{saving || !canSave}}">
+    保存
+  </button>
+</view>

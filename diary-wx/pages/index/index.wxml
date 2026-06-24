@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="header">
+    <text class="title">我的日记</text>
+    <text class="subtitle" wx:if="{{devMode}}">开发模式 · dev-login</text>
+  </view>
+
+  <button class="primary-btn" bindtap="onWriteToday">写今日日记</button>
+
+  <view class="section-title">最近记录</view>
+
+  <block wx:if="{{loading}}">
+    <view class="empty">加载中...</view>
+  </block>
+
+  <block wx:elif="{{diaries.length === 0}}">
+    <view class="empty">还没有日记，点击上方按钮开始记录</view>
+  </block>
+
+  <block wx:else>
+    <view
+      class="card diary-item"
+      wx:for="{{diaries}}"
+      wx:key="id"
+      data-date="{{item.date}}"
+      bindtap="onOpenDiary"
+    >
+      <view class="diary-date">{{item.date}}</view>
+      <view class="diary-content">{{item.content || '（无文字）'}}</view>
+    </view>
+  </block>
+</view>

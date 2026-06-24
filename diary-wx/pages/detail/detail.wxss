@@ -1,0 +1,26 @@
+.date {
+  color: #667eea;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.updated {
+  color: #999;
+  font-size: 22rpx;
+  margin-top: 24rpx;
+}
+
+.danger-btn {
+  background: #fff;
+  border: 1rpx solid #ff4d4f;
+  border-radius: 16rpx;
+  color: #ff4d4f;
+  margin-top: 24rpx;
+}

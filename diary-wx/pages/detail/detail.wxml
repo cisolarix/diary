@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="card" wx:if="{{diary}}">
+    <view class="date">{{diary.date}}</view>
+    <view class="content">{{diary.content}}</view>
+    <view class="updated" wx:if="{{diary.updatedAt}}">更新于 {{diary.updatedAt}}</view>
+  </view>
+
+  <view class="empty" wx:elif="{{loading}}">加载中...</view>
+  <view class="empty" wx:else>日记不存在</view>
+
+  <button class="primary-btn" wx:if="{{diary}}" bindtap="onEdit">编辑</button>
+  <button class="danger-btn" wx:if="{{diary}}" bindtap="onDelete">删除</button>
+</view>
