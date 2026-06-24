@@ -6,28 +6,38 @@
 
 - Java 21
 - Maven 3.9+（或使用项目自带的 `./mvnw`）
-- Docker（用于本地 PostgreSQL）
+- 本地已有 PostgreSQL（例如 Docker 中的 `postgres_db`，端口 **5432**）
+
+## 数据库准备
+
+在现有 PostgreSQL 中创建库（只需一次）：
+
+```bash
+docker exec postgres_db psql -U postgres -c "CREATE DATABASE diary_dev;"
+```
+
+连接信息通过环境变量配置，参考 `.env.example`。本地示例：
+
+```bash
+export DB_HOST=localhost
+export DB_PORT=5432
+export DB_NAME=diary_dev
+export DB_USER=postgres
+export DB_PASSWORD=你的密码
+```
 
 ## 快速开始
 
-### 1. 启动数据库
-
 ```bash
 cd diary-server
-docker compose up -d
-```
-
-### 2. 启动 API
-
-```bash
 ./mvnw spring-boot:run
 ```
 
-默认监听 `http://localhost:8080`。PostgreSQL 通过 Docker 映射到本机 **5433** 端口（若你本机 5432 已被占用）。
+默认监听 `http://localhost:8080`。Flyway 会在启动时自动执行迁移。
 
 本地开发模式下未配置微信 AppSecret 时，登录接口接受 `code: "dev-login"`，自动创建开发用户。
 
-### 3. 验证
+## 验证
 
 ```bash
 # 健康检查

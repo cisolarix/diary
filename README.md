@@ -1,8 +1,12 @@
-ChatGPT 给我的几个建议
+# diary
 
-我觉得最有潜力的几个
+日记小程序 monorepo。
 
-如果让我按“独立开发者做长期品牌”排序：
+---
+
+## 产品命名备选（ChatGPT 建议）
+
+我觉得最有潜力的几个（独立开发者做长期品牌）：
 
 ### 🥇 言记
 
@@ -65,3 +69,34 @@ AI 自动生成：
 * 回忆卡片
 
 这个方向和普通日记小程序相比，差异会非常明显。
+
+---
+
+## 子项目
+
+| 目录 | 说明 |
+|------|------|
+| [`diary-wx/`](diary-wx/) | 微信小程序前端 |
+| [`diary-server/`](diary-server/) | Spring Boot + PostgreSQL 后端 |
+| [`wxb70d839ad8ad77a9_unpacked/`](wxb70d839ad8ad77a9_unpacked/) | 向心日记反编译参考（只读） |
+
+## 文档
+
+- [向心日记-技术分析与商业评估.md](向心日记-技术分析与商业评估.md)
+- [技术选型与开发建议.md](技术选型与开发建议.md)
+
+## 快速启动（Phase 0）
+
+前提：本地 Docker 中已有 PostgreSQL（如 `postgres_db`，端口 5432），并已创建库 `diary_dev`。
+
+```bash
+# 1. 配置数据库密码（参考 diary-server/.env.example）
+export DB_PASSWORD=你的密码
+
+# 2. 启动后端
+cd diary-server && ./mvnw spring-boot:run
+
+# 3. 小程序：微信开发者工具导入 diary-wx，关闭域名校验后编译
+```
+
+详细说明见各子目录 README。

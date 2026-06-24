@@ -46,7 +46,7 @@ diary-wx/
 
 ## 联调 checklist
 
-- [ ] `docker compose up -d` 启动 PostgreSQL
+- [ ] 本地 PostgreSQL 已就绪，库 `diary_dev` 已创建
 - [ ] `./mvnw spring-boot:run` 启动后端
 - [ ] 微信开发者工具关闭域名校验
 - [ ] 首页能加载列表，写作页能保存
