@@ -87,7 +87,7 @@ AI 自动生成：
 
 ## 快速启动（Phase 0）
 
-前提：本地 Docker 中已有 PostgreSQL（如 `postgres_db`，端口 5432），并已创建库 `diary_dev`。
+前提：本地 Docker 中已有 PostgreSQL（如 `postgres_db`，端口 5432），并已创建库 `diary`。
 
 ```bash
 # 1. 配置数据库密码（参考 diary-server/.env.example）

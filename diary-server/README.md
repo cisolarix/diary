@@ -13,7 +13,7 @@
 在现有 PostgreSQL 中创建库（只需一次）：
 
 ```bash
-docker exec postgres_db psql -U postgres -c "CREATE DATABASE diary_dev;"
+docker exec postgres_db psql -U postgres -c "CREATE DATABASE diary;"
 ```
 
 连接信息通过环境变量配置，参考 `.env.example`。本地示例：
@@ -21,7 +21,7 @@ docker exec postgres_db psql -U postgres -c "CREATE DATABASE diary_dev;"
 ```bash
 export DB_HOST=localhost
 export DB_PORT=5432
-export DB_NAME=diary_dev
+export DB_NAME=diary
 export DB_USER=postgres
 export DB_PASSWORD=你的密码
 ```
