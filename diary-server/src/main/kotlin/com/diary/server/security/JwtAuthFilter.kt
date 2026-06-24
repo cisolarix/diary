@@ -12,29 +12,29 @@ import org.springframework.web.filter.OncePerRequestFilter
 
 @Component
 class JwtAuthFilter(
-    private val jwtService: JwtService
+  private val jwtService: JwtService
 ) : OncePerRequestFilter() {
 
-    override fun doFilterInternal(
-        request: HttpServletRequest,
-        response: HttpServletResponse,
-        filterChain: FilterChain
-    ) {
-        val header = request.getHeader(HttpHeaders.AUTHORIZATION)
-        if (header != null && header.startsWith("Bearer ")) {
-            val token = header.substring(7)
-            try {
-                val userId = jwtService.getUserId(token)
-                val openId = jwtService.parseToken(token)["openId", String::class.java]
-                val authentication = UsernamePasswordAuthenticationToken(
-                    AuthUser(userId, openId), null, listOf()
-                )
-                SecurityContextHolder.getContext().authentication = authentication
-            } catch (_: Exception) {
-                SecurityContextHolder.clearContext()
-            }
-        }
-
-        filterChain.doFilter(request, response)
+  override fun doFilterInternal(
+    request: HttpServletRequest,
+    response: HttpServletResponse,
+    filterChain: FilterChain
+  ) {
+    val header = request.getHeader(HttpHeaders.AUTHORIZATION)
+    if (header != null && header.startsWith("Bearer ")) {
+      val token = header.substring(7)
+      try {
+        val userId = jwtService.getUserId(token)
+        val openId = jwtService.parseToken(token)["openId", String::class.java]
+        val authentication = UsernamePasswordAuthenticationToken(
+          AuthUser(userId, openId), null, listOf()
+        )
+        SecurityContextHolder.getContext().authentication = authentication
+      } catch (_: Exception) {
+        SecurityContextHolder.clearContext()
+      }
     }
+
+    filterChain.doFilter(request, response)
+  }
 }

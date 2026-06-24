@@ -14,21 +14,21 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 class SecurityConfig {
 
-    @Bean
-    @Throws(Exception::class)
-    fun securityFilterChain(http: HttpSecurity, jwtAuthFilter: JwtAuthFilter): SecurityFilterChain {
-        http
-            .csrf { it.disable() }
-            .cors(Customizer.withDefaults())
-            .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
-            .authorizeHttpRequests { auth ->
-                auth
-                    .requestMatchers("/actuator/health", "/api/auth/**").permitAll()
-                    .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                    .anyRequest().authenticated()
-            }
-            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter::class.java)
+  @Bean
+  @Throws(Exception::class)
+  fun securityFilterChain(http: HttpSecurity, jwtAuthFilter: JwtAuthFilter): SecurityFilterChain {
+    http
+      .csrf { it.disable() }
+      .cors(Customizer.withDefaults())
+      .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
+      .authorizeHttpRequests { auth ->
+        auth
+          .requestMatchers("/actuator/health", "/api/auth/**").permitAll()
+          .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+          .anyRequest().authenticated()
+      }
+      .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter::class.java)
 
-        return http.build()
-    }
+    return http.build()
+  }
 }

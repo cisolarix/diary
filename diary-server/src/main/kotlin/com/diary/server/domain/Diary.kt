@@ -18,49 +18,49 @@ import java.time.LocalDate
 @Table(name = "diaries")
 class Diary {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  var id: Long? = null
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    var user: User? = null
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  @JoinColumn(name = "user_id", nullable = false)
+  var user: User? = null
 
-    @Column(name = "diary_date", nullable = false)
-    var diaryDate: LocalDate? = null
+  @Column(name = "diary_date", nullable = false)
+  var diaryDate: LocalDate? = null
 
-    @Column(nullable = false, columnDefinition = "text")
-    var content: String = ""
+  @Column(nullable = false, columnDefinition = "text")
+  var content: String = ""
 
-    @Column(length = 256)
-    var location: String? = null
+  @Column(length = 256)
+  var location: String? = null
 
-    var latitude: Double? = null
+  var latitude: Double? = null
 
-    var longitude: Double? = null
+  var longitude: Double? = null
 
-    @Column(name = "created_at", nullable = false)
-    var createdAt: Instant? = null
-        private set
+  @Column(name = "created_at", nullable = false)
+  var createdAt: Instant? = null
+    private set
 
-    @Column(name = "updated_at", nullable = false)
-    var updatedAt: Instant? = null
-        private set
+  @Column(name = "updated_at", nullable = false)
+  var updatedAt: Instant? = null
+    private set
 
-    @Column(name = "deleted_at")
-    var deletedAt: Instant? = null
+  @Column(name = "deleted_at")
+  var deletedAt: Instant? = null
 
-    val isDeleted: Boolean get() = deletedAt != null
+  val isDeleted: Boolean get() = deletedAt != null
 
-    @PrePersist
-    fun onCreate() {
-        val now = Instant.now()
-        createdAt = now
-        updatedAt = now
-    }
+  @PrePersist
+  fun onCreate() {
+    val now = Instant.now()
+    createdAt = now
+    updatedAt = now
+  }
 
-    @PreUpdate
-    fun onUpdate() {
-        updatedAt = Instant.now()
-    }
+  @PreUpdate
+  fun onUpdate() {
+    updatedAt = Instant.now()
+  }
 }

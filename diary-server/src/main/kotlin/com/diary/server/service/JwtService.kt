@@ -13,28 +13,28 @@ import javax.crypto.SecretKey
 @Service
 class JwtService(properties: JwtProperties) {
 
-    private val secretKey: SecretKey = Keys.hmacShaKeyFor(properties.secret.toByteArray(StandardCharsets.UTF_8))
-    private val expirationHours: Long = properties.expirationHours
+  private val secretKey: SecretKey = Keys.hmacShaKeyFor(properties.secret.toByteArray(StandardCharsets.UTF_8))
+  private val expirationHours: Long = properties.expirationHours
 
-    fun generateToken(userId: Long?, openId: String?): String {
-        val now = Instant.now()
-        val expiry = now.plus(expirationHours, ChronoUnit.HOURS)
+  fun generateToken(userId: Long?, openId: String?): String {
+    val now = Instant.now()
+    val expiry = now.plus(expirationHours, ChronoUnit.HOURS)
 
-        return Jwts.builder()
-            .subject(userId.toString())
-            .claim("openId", openId)
-            .issuedAt(Date.from(now))
-            .expiration(Date.from(expiry))
-            .signWith(secretKey)
-            .compact()
-    }
+    return Jwts.builder()
+      .subject(userId.toString())
+      .claim("openId", openId)
+      .issuedAt(Date.from(now))
+      .expiration(Date.from(expiry))
+      .signWith(secretKey)
+      .compact()
+  }
 
-    fun parseToken(token: String) =
-        Jwts.parser()
-            .verifyWith(secretKey)
-            .build()
-            .parseSignedClaims(token)
-            .payload
+  fun parseToken(token: String) =
+    Jwts.parser()
+      .verifyWith(secretKey)
+      .build()
+      .parseSignedClaims(token)
+      .payload
 
-    fun getUserId(token: String): Long = parseToken(token).subject.toLong()
+  fun getUserId(token: String): Long = parseToken(token).subject.toLong()
 }

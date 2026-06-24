@@ -10,16 +10,16 @@ import java.time.LocalDate
 
 interface DiaryRepository : JpaRepository<Diary, Long> {
 
-    fun findByUserAndDiaryDateAndDeletedAtIsNull(user: User, diaryDate: LocalDate): Diary?
+  fun findByUserAndDiaryDateAndDeletedAtIsNull(user: User, diaryDate: LocalDate): Diary?
 
-    @Query(
-        """
+  @Query(
+    """
         SELECT d FROM Diary d
         WHERE d.user = :user
           AND d.deletedAt IS NULL
           AND (:since IS NULL OR d.updatedAt > :since)
         ORDER BY d.diaryDate DESC
         """
-    )
-    fun findActiveByUserSince(@Param("user") user: User, @Param("since") since: Instant?): List<Diary>
+  )
+  fun findActiveByUserSince(@Param("user") user: User, @Param("since") since: Instant?): List<Diary>
 }

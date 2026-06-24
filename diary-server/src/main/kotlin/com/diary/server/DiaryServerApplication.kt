@@ -11,5 +11,5 @@ import org.springframework.boot.runApplication
 class DiaryServerApplication
 
 fun main(args: Array<String>) {
-    runApplication<DiaryServerApplication>(*args)
+  runApplication<DiaryServerApplication>(*args)
 }

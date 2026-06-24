@@ -12,18 +12,18 @@ import org.springframework.web.server.ResponseStatusException
 @RestControllerAdvice
 class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResponseStatusException::class)
-    fun handleResponseStatus(ex: ResponseStatusException): ResponseEntity<ApiErrorResponse> =
-        ResponseEntity.status(ex.statusCode)
-            .body(ApiErrorResponse(ex.reason ?: ""))
+  @ExceptionHandler(ResponseStatusException::class)
+  fun handleResponseStatus(ex: ResponseStatusException): ResponseEntity<ApiErrorResponse> =
+    ResponseEntity.status(ex.statusCode)
+      .body(ApiErrorResponse(ex.reason ?: ""))
 
-    @ExceptionHandler(MethodArgumentNotValidException::class)
-    fun handleValidation(ex: MethodArgumentNotValidException): ResponseEntity<ApiErrorResponse> {
-        val errors = linkedMapOf<String, String>()
-        for (error in ex.bindingResult.fieldErrors) {
-            errors[error.field] = error.defaultMessage ?: ""
-        }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-            .body(ApiErrorResponse("Validation failed", errors))
+  @ExceptionHandler(MethodArgumentNotValidException::class)
+  fun handleValidation(ex: MethodArgumentNotValidException): ResponseEntity<ApiErrorResponse> {
+    val errors = linkedMapOf<String, String>()
+    for (error in ex.bindingResult.fieldErrors) {
+      errors[error.field] = error.defaultMessage ?: ""
     }
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+      .body(ApiErrorResponse("Validation failed", errors))
+  }
 }

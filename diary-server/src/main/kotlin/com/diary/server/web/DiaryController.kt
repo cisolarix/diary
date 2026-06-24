@@ -21,30 +21,30 @@ import java.time.LocalDate
 @RestController
 @RequestMapping("/api/diaries")
 class DiaryController(
-    private val diaryService: DiaryService
+  private val diaryService: DiaryService
 ) {
-    @GetMapping
-    fun list(
-        @AuthenticationPrincipal user: AuthUser,
-        @RequestParam(required = false) since: Instant?
-    ): List<DiaryResponse> = diaryService.listDiaries(user.userId, since)
+  @GetMapping
+  fun list(
+    @AuthenticationPrincipal user: AuthUser,
+    @RequestParam(required = false) since: Instant?
+  ): List<DiaryResponse> = diaryService.listDiaries(user.userId, since)
 
-    @GetMapping("/{date}")
-    fun get(
-        @AuthenticationPrincipal user: AuthUser,
-        @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate
-    ): DiaryResponse = diaryService.getDiary(user.userId, date)
+  @GetMapping("/{date}")
+  fun get(
+    @AuthenticationPrincipal user: AuthUser,
+    @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate
+  ): DiaryResponse = diaryService.getDiary(user.userId, date)
 
-    @PutMapping("/{date}")
-    fun upsert(
-        @AuthenticationPrincipal user: AuthUser,
-        @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate,
-        @Valid @RequestBody request: DiaryRequest
-    ): DiaryResponse = diaryService.upsertDiary(user.userId, date, request)
+  @PutMapping("/{date}")
+  fun upsert(
+    @AuthenticationPrincipal user: AuthUser,
+    @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate,
+    @Valid @RequestBody request: DiaryRequest
+  ): DiaryResponse = diaryService.upsertDiary(user.userId, date, request)
 
-    @DeleteMapping("/{date}")
-    fun delete(
-        @AuthenticationPrincipal user: AuthUser,
-        @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate
-    ) = diaryService.deleteDiary(user.userId, date)
+  @DeleteMapping("/{date}")
+  fun delete(
+    @AuthenticationPrincipal user: AuthUser,
+    @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) date: LocalDate
+  ) = diaryService.deleteDiary(user.userId, date)
 }
